@@ -29,6 +29,11 @@ The following file was gathered from the VARD tool of early modern variant spell
 <li><i>variants.txt</i></li>
 </ul>
 
+<ul>
+The following file was sent to us by Martin Muller who extracted this file of alternate spellings using MorphAdorner. It is broken up by time periods.
+<li><i>emopspellings.txt</i></li>
+</ul>
+
 <li><b>Cleaned</b>: This folder contains cleaned up versions of the Raw files, with just the words left.</li>
 
 <li><b>Combos</b>: This folder contains alphabetically sorted word lists that are combinations of the cleaned lists with all duplicates removed. Files with a suffix of "-CSU" have been cleaned, sorted, and all entries are unique (no duplicates). Files that are underlined and bold, are what we have used in eMOP as the basis for our freq-dawg and word-dawg word lists when training Tesseract to run on the eMOP data set of 45 million page images.</li>
