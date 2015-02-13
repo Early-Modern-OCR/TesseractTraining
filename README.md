@@ -15,6 +15,7 @@ The following files were collected from various sources by Ted Underwood and pas
 <li><i>SyncopeRules.txt</i></li>
 <li><i>VariantSpellings.txt</i></li>
 </ul>
+</ul>
 <br />
 
 <ul>
@@ -52,3 +53,40 @@ The following file was sent to us by Martin Muller who extracted this file of al
 <li><b><i>TCP-words-gt500.txt</i></b> as our frequently used word list (<b>freq-dawg</b>.</li>
 </ul>
 </p>
+
+<br/><br/>
+
+<h2>FontTraining:</h2>
+<ul>
+<li><b>forEMOP</b>: This folder contains .traineddata, .box, and .tif files used to create the font training for Tesseract on the eMOP project. There are also sample images of each typeface used to create the training as binarized .tif images.</li>
+<li><b>notUsed</b>: This folder contains .traineddata, .box, and .tif files used to create the font training for Tesseract, which, after extensive testing, we did not end up using on the eMOP project for various reasons. There are also sample images of each typeface used to create the training as binarized .tif images.</li>
+<li><b>combos</b>: This folder contains .traineddata files of every Blackletter typeface we created training for (BL5-All-D2.traineddata) and every Roman &amp; Italic typeface we created training for (RI5-All-D2.traineddata). Both files were created using training from the <i>forEMOP</i> and <i>notUsed</i> folders.</li>
+
+<p>The <i>forEMOP</i> and <i>notUsed</i> folders both contain multiple folders cover typefaces created by/for specific individuals. The name convention for the folders is<br/>
+<blockquote>&lt;name&gt;-&lt;font type&gt;-&lt;year(s) of creation&gt;</blockquote>
+where
+<ul>
+<li><b>&lt;font type&gt;</b> can be any combination of 
+<ul>
+<li><b>R</b>: Roman</li>
+<li><b>I</b>: Italic</li>
+<li><b>B</b>: Blackletter</li>
+</ul></li>
+<li><b>&lt;year(s) of creation&gt;</b>is one or more years, separated by a '-'.</li>
+</ul></p>
+
+<p>Each of these folders contains
+<ul>
+<li>A '.traineddata' file, which can be placed in any local tessdata file and used to OCR page images using that typeface or a similar one.</li>
+<li>A '.tar.gz' file, which contains the box/tif file pairs we created with Franken+ (https://github.com/Early-Modern-OCR/FrankenPlus) for each of these typefaces. For typefaces with multiple styles (roman, italic, blackletter, alternate roman, etc.), and/or multitple styles the differences can be seen in the names of the box/tif file pairs.</li>
+<li>A 'sample/' folder of binarized tifs of some of the page images used to create the training for that typeface.</li>
+</ul></p>
+
+<p>Inside the <i>forEMOP</i> folder is a 'combos/' folder containing <b>SC8b-R7-D2b.traineddata</b>, which is the training file we used to OCR the eMOP corpus. It contains:
+<ul>
+<li><b>Typeface training</b> for all of the typefaces listed in the 'forEMOP' folder.</li>
+<li><b>Dictionary files</b>created using https://github.com/Early-Modern-OCR/TesseractTraining/blob/master/Dictionaries/Combos/FullDict-184k.txt to generate the word-dawg file and https://github.com/Early-Modern-OCR/TesseractTraining/blob/master/Dictionaries/Combos/TCP-words-gt500.txt to generate freq-dawg.</li>
+</ul></p>
+
+</ul>
+<br />
